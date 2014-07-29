@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<Configuration xmlns="http://www.sdltridion.com/2009/GUI/Configuration"
+	xmlns:ext="http://www.sdltridion.com/2009/GUI/extensions"
+	xmlns:cmenu="http://www.sdltridion.com/2009/GUI/extensions/ContextMenu">
+
+	<editors>
+		
+		<editor xmlns="http://www.sdltridion.com/2009/GUI/Configuration" name="UIBeardcore.Tools.Rename.Editor">
+			<installpath>D:\von Eagle - Private\Projects\InternalProjects\UIBeardcore.Extensibility\Tools\Rename\UIBeardcore.Tools.Rename.Editor</installpath>
+			<configuration>Configuration\UIBeardcore.Tools.Rename.Editor.config</configuration>
+			<vdir>UIBeardcoreToolsRename</vdir>
+		</editor>
+			
+	</editors>
+		
+</Configuration>

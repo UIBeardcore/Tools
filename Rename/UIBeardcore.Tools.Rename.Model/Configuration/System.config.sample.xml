@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<Configuration xmlns="http://www.sdltridion.com/2009/GUI/Configuration"
+	xmlns:ext="http://www.sdltridion.com/2009/GUI/extensions"
+	xmlns:cmenu="http://www.sdltridion.com/2009/GUI/extensions/ContextMenu">
+
+	<models>
+
+		<model xmlns="http://www.sdltridion.com/2009/GUI/Configuration" name="UIBeardcore.Tools.Rename">
+			<installpath>D:\von Eagle - Private\Projects\InternalProjects\UIBeardcore.Extensibility\Tools\Rename\UIBeardcore.Tools.Rename.Model</installpath>
+			<configuration>Configuration\UIBeardcore.Tools.Rename.Model.config</configuration>
+			<vdir>UIBeardcoreToolsRename</vdir>
+		</model>
+			
+	</models>
+		
+</Configuration>

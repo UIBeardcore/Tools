@@ -1,0 +1,69 @@
+﻿#RenameDialog
+{
+	/* Something will go there, ...eventually */
+}
+
+#RenameDialog,
+#RenameDialog body
+{
+	height: 100%;
+	padding: 0;
+}
+
+#RenameDialog body > *
+{
+	margin: 10px 10px 5px;
+}
+
+#RenameDialog .field
+{
+	margin: 2px 0;
+}
+
+#RenameDialog .fieldgroup .sub-header
+{
+	line-height: 20px;
+	border-bottom: 1px solid #555;
+	margin: 15px 0 5px;
+}
+
+#RenameDialog .field .sequential-numbers,
+#RenameDialog .field .sequential-position
+{
+	display: inline-block;
+	width: 50%;
+	position: relative;
+	padding: 0;
+	margin: 0;
+	left: 50%;
+	top: 0;
+}
+
+#RenameDialog .field .sequential-numbers > div,
+#RenameDialog .field .sequential-position > div
+{
+	height: 22px;
+}
+
+#RenameDialog .field .sequential-numbers
+{
+	margin-left: -50%;
+}
+
+#RenameDialog .field .sequential-numbers input
+{
+	width: 30px;
+}
+
+#RenameDialog .field label
+{
+	line-height: 20px;
+}
+
+#RenameDialog #PreviewArea
+{
+	margin-bottom: 0;
+	border: 1px solid #DDD;
+	height: 125px;
+	overflow: auto;
+}

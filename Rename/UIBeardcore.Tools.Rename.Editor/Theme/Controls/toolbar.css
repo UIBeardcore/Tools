@@ -1,0 +1,10 @@
+﻿
+.ribbontoolbar #BeardcoreRename.button .image
+{
+	background-image: url({ThemePath}Icons/ui.beardcore.rename.32x32.png);
+}
+
+.ribbontoolbar.minimized #BeardcoreRename.button .image
+{
+	background-image: url({ThemePath}Icons/ui.beardcore.rename.16x16.png);
+}

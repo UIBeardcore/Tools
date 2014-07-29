@@ -1,0 +1,2 @@
+﻿<%@ Assembly Name="UIBeardcore.Tools.Rename.Model" %>
+<%@ ServiceHost Language="C#" Debug="true" Service="UIBeardcore.Tools.Rename.Model.Services.UIBeardcoreToolsManager" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
