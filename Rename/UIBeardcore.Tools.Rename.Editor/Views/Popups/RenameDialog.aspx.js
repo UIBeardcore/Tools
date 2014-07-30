@@ -25,7 +25,7 @@ UIBeardcore.Tools.Rename.Views.Popups.RenameDialog.prototype.initialize = functi
 	if (itemsCount > 0)
 	{
 		c.elementsSelectedLabel = $("#ElementsSelectedLabel");
-		$dom.setInnerText(c.elementsSelectedLabel, "{0} items selected".format(p.itemsCount || 0));
+		$dom.setInnerText(c.elementsSelectedLabel, "{0} items selected".format(itemsCount || 0));
 
 		c.newFileName = $("#NewFileName");
 		$evt.addEventHandler(c.newFileName, "valuepropertychange", this.getDelegate(this._generatePreview));
