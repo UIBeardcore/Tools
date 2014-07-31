@@ -11,6 +11,11 @@
 	100% { opacity: 0.8; }
 }
 
+html.ui-beardcore-draggable
+{
+	width: 100%;
+}
+
 html.ui-beardcore-draggable body
 {
 	-webkit-animation: blinking 1s ease-in-out infinite;
@@ -22,6 +27,7 @@ html.ui-beardcore-draggable body
 
 html.ui-beardcore-draggable body:after
 {
+	z-index: 9999;
 	position: absolute;
 	left: 50%;
 	top: 50%;

@@ -16,7 +16,7 @@ UIBeardcore.Tools.MultipleUpload.FileUploader.prototype.upload = function FileUp
 	var p = this.properties;
 	if (!p.active)
 	{
-		if (dataTransfer instanceof DataTransfer)
+		//if (dataTransfer instanceof DataTransfer)
 		{
 			var filesToUpload = dataTransfer.files;
 
@@ -52,7 +52,7 @@ UIBeardcore.Tools.MultipleUpload.FileUploader.prototype._uploadFile = function F
 	var p = this.properties;
 	if (p.active && !p.cancelled)
 	{
-		//if (dataTransfer instanceof DataTransfer)
+		//if (uploadFile instanceof File)
 		{
 			var fileName = uploadFile.name;
 			var fileReader = new FileReader();
@@ -62,7 +62,7 @@ UIBeardcore.Tools.MultipleUpload.FileUploader.prototype._uploadFile = function F
 				p.itemsDoneCount++;
 				p.errors.push({
 					"FileName": fileName,
-					"ErrorMessage": error.Message
+					"ErrorMessage": error.Message || error.message
 				});
 
 				this._onUpdate();
