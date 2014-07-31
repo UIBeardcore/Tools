@@ -34,7 +34,7 @@ namespace UIBeardcore.Tools.Rename.Model.Services
 				int sequanceId = 0;
 				foreach (string itemId in itemsIds)
 				{
-					operationParameters.Add(String.Format("NewNameSequanceMarkup::{0}", itemId), GetSequanceMarkup(++sequanceId, options));
+					operationParameters.Add(String.Format("NewNameSequanceMarkup::{0}", itemId), GetSequanceMarkup(sequanceId++, options));
 				}
 			}
 
@@ -65,7 +65,7 @@ namespace UIBeardcore.Tools.Rename.Model.Services
 				int numLength = options.NumberOfDigits - numberMarkup.Length;
 				if (numLength > 0)
 				{
-					numberMarkup = (new String('0', numLength + 1)) + numberMarkup;
+					numberMarkup = (new String('0', numLength)) + numberMarkup;
 				}
 			}
 
