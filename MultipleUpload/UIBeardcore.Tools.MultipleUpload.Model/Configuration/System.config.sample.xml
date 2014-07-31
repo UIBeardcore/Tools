@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<Configuration xmlns="http://www.sdltridion.com/2009/GUI/Configuration"
+	xmlns:ext="http://www.sdltridion.com/2009/GUI/extensions"
+	xmlns:cmenu="http://www.sdltridion.com/2009/GUI/extensions/ContextMenu">
+
+	<models>
+
+		<model xmlns="http://www.sdltridion.com/2009/GUI/Configuration" name="UIBeardcore.Tools.MultipleUpload">
+			<installpath>D:\von Eagle - Private\Projects\InternalProjects\UIBeardcore.Extensibility\Tools\MultipleUpload\UIBeardcore.Tools.MultipleUpload.Model</installpath>
+			<configuration>Configuration\UIBeardcore.Tools.MultipleUpload.Model.config</configuration>
+			<vdir>UIBeardcoreToolsMultipleUpload</vdir>
+		</model>
+			
+	</models>
+		
+</Configuration>
