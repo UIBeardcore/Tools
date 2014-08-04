@@ -82,7 +82,9 @@
   <ItemGroup>
     <Content Include="Client\Constants.js" />
     <Content Include="Client\FilesUploader.js" />
-    <Content Include="Configuration\System.config.sample.xml" />
+    <Content Include="Configuration\System.config.sample.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Services\UIBeardcoreToolsMultipleUpload.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
