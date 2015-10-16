@@ -1,0 +1,2 @@
+﻿<%@ Assembly Name="UIBeardcore.Tools.TopologyManagerClient.Model" %>
+<%@ ServiceHost Language="C#" Debug="true" Service="UIBeardcore.Tools.TopologyManagerClient.Model.Services.UIBeardcoreToolsManager" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

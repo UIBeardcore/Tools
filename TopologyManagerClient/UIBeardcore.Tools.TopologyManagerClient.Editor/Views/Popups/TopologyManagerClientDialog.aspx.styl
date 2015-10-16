@@ -1,0 +1,180 @@
+$windowHeight = 450px;
+$windowWidth = 600px;
+
+$supportBlocksHeight = 20px;
+$supportBlocksMargins = 10px;
+
+$bs = 1px
+$bcolor = #A1A9B2
+$wSideMargin = 10px
+$w = $windowWidth - $wSideMargin*2;
+$h = $windowHeight - 2*($supportBlocksHeight + 2*$supportBlocksMargins);
+$cr = 2*math((($h*$w)/6)/3.14, 'sqrt');
+$clh = $h/3;
+$backColor = lighten(#1d9ceb, 50%)
+
+setColors(i)
+  background-color spin($backColor, 25*i)
+  color mix(#000, @background-color, 50%)    
+  &.full
+    background-color lighten(@background-color, 70%)
+
+#TopologyManagerClientDialog
+  body
+    height: 100%;
+    padding: 0;
+
+  .dialogtitle
+  .BtnWrapper
+    color #FF4300
+    text-align center
+    height $supportBlocksHeight
+    margin $supportBlocksMargins auto
+
+    #Close
+      left 50%
+      position relative
+      margin-left -50px
+      
+  .error-message,
+  .itemdialog,
+  .listcontainer
+    width $w - 2*$wSideMargin
+    height $h - ($supportBlocksHeight + 2*$supportBlocksMargins) - 2*$wSideMargin
+    position absolute
+    top 2*($supportBlocksHeight + 2*$supportBlocksMargins) + $wSideMargin
+    left 2*$wSideMargin
+    background none
+    z-index -10
+    visibility hidden
+    transition-delay 0s
+    
+    &.active
+      z-index 10
+      visibility visible
+      transition visibility .5s ease .3s
+      
+    #TtmList
+      width 100%
+      height 100%
+      padding 0
+      margin 0
+      
+    $buttonSize = 36px;
+    .uibc-list-buttons
+      position absolute
+      top -($buttonSize + $supportBlocksMargins)
+      background-size: 32px;
+      background-repeat no-repeat
+      background-position center
+      
+      span
+        background-color transparent
+
+      &.at-right
+        right 0
+
+      &#AddNewItem
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNpcmNsZSBjeD0iMjk3LjYiIGN5PSI0MjAuOSIgZmlsbD0iIzRDQUY1MCIgcj0iMjI0LjQiLz48Zz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjIxMy43IiB3aWR0aD0iNjQuMSIgeD0iMjY1LjYiIHk9IjMxNC4xIi8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSI2NC4xIiB3aWR0aD0iMjEzLjciIHg9IjE5MC44IiB5PSIzODguOSIvPjwvZz48L3N2Zz4=");
+
+      &#ItemConfirm
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNpcmNsZSBjeD0iMjk3LjYiIGN5PSI0MjAuOSIgZmlsbD0iIzRDQUY1MCIgcj0iMjM0LjQiLz48cG9seWdvbiBmaWxsPSIjQ0NGRjkwIiBwb2ludHM9IjQxNiwzMTYgMjY0LjEsNDY3LjggMjAxLjYsNDA1LjMgMTcwLjQsNDM2LjYgMjY0LjEsNTMwLjMgNDQ3LjIsMzQ3LjMgIi8+PC9zdmc+");
+        
+      &#CloseError,
+      &#BackToSection 
+        background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGc+PHBvbHlnb24gZmlsbD0iIzAwQkNENCIgcG9pbnRzPSI2MiwzNDYuNSAyMzUuNiwyMDEuNCAyMzUuNiw0OTEuNiAgIi8+PHBhdGggZD0iTTM0Ny4yLDI5Ni45SDE5OC40djk5LjJoMTQ4LjhjMzQuNywwLDYyLDI3LjMsNjIsNjJzLTI3LjMsNjItNjIsNjJIMzEwdjk5LjJoMzcuMiAgIGM4OS4zLDAsMTYxLjItNzEuOSwxNjEuMi0xNjEuMlM0MzYuNSwyOTYuOSwzNDcuMiwyOTYuOXoiIGZpbGw9IiMwMEJDRDQiLz48L2c+PC9zdmc+");
+        
+
+  .error-message
+    width $w
+    height $h
+    top ($supportBlocksHeight + 2*$supportBlocksMargins)
+    left $wSideMargin
+    background-image url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTI3MC40LDYyNC4xTDk0LjUsNDQ4LjJjLTE1LjYtMTUuNi0xNS42LTQwLjEsMC01NS43bDE3NS45LTE3NS45YzE1LjYtMTUuNiw0MC4xLTE1LjYsNTUuNywwTDUwMiwzOTIuNSAgYzE1LjYsMTUuNiwxNS42LDQwLjEsMCw1NS43TDMyNi4xLDYyNC4xQzMxMC41LDYzOS43LDI4NS4xLDYzOS43LDI3MC40LDYyNC4xeiIgZmlsbD0iI0Y0NDMzNiIvPjxwYXRoIGQ9Ik0yNzQuMyw1MDUuOGMwLTIuOSwxLTUuOSwyLTguOGMxLTIuOSwyLjktNC45LDQuOS02LjhjMi0yLDQuOS0zLjksNy44LTQuOWMyLjktMSw1LjktMiw5LjgtMnM2LjgsMSw5LjgsMiAgYzIuOSwxLDUuOSwyLjksNy44LDQuOWMyLDIsMy45LDMuOSw0LjksNi44YzEsMi45LDIsNS45LDIsOC44YzAsMi45LTEsNS45LTIsOC44Yy0xLDIuOS0yLjksNC45LTQuOSw2LjhjLTIsMi00LjksMy45LTcuOCw0LjkgIHMtNS45LDItOS44LDJzLTYuOC0xLTkuOC0yYy0yLjktMS00LjktMi45LTcuOC00LjljLTItMi0zLjktMy45LTQuOS02LjhDMjc1LjMsNTExLjcsMjc0LjMsNTA5LjcsMjc0LjMsNTA1Ljh6IE0zMTUuNCw0NjAuOWgtMzUuMiAgbC00LjktMTQ3LjVoNDQuOUwzMTUuNCw0NjAuOXoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=");
+    background-size $h * 0.5
+    background-position $wSideMargin center
+    background-repeat no-repeat
+    background-color rgba(239,210,208, 0.85)
+    transition-delay 0s
+    
+    &.active
+      z-index 100
+      
+    .uibc-list-buttons
+      left $supportBlocksMargins
+      top $supportBlocksMargins
+
+    .error-message-text
+      position relative
+      top $h * 0.25
+      height $h * 0.5
+      left $h * 0.5 + $wSideMargin*2
+      width $w - @left - $wSideMargin*2
+      overflow auto
+
+  .itemdialog  
+    background-color #EDEDED
+    z-index -20
+    outline $bs solid #AAA
+    transition-delay 0s
+    
+    &.active
+      z-index 20
+      transition-delay 0s
+      .field
+        margin 10px
+
+  .container
+    position relative;
+    margin 0 $wSideMargin
+    width $w
+    height $h
+    font-size 1.5em
+    font-weight bold
+
+  .container > div
+    position absolute
+    border $bs solid $bcolor
+    text-align left;
+    transition .3s ease-in-out
+    width ($w/2 - 2*$bs)
+    height ($clh -  2*$bs)
+    setColors(0)
+    &:before
+    &:after
+      content "\00a0\00a0"
+
+    &:nth-child(even)
+      left ($w/2)
+      text-align right
+
+    for i in (1..6)
+      &:nth-child({i})
+        top ($clh*ceil(i/2) - $clh)px
+        line-height $clh
+        setColors(i)
+
+    &.cicrle
+      text-align center
+      border-radius 50%;
+      width $cr
+      height $cr
+      left 50%
+      top 50%
+      z-index 2
+      line-height $cr      
+      margin-left -($cr/2)
+      margin-top -($cr/2)
+
+    &.full
+      border-radius 0
+      text-align center
+      line-height 40px      
+      width $w
+      height $h
+      margin 0
+      left 0
+      top 0
+      bottom 0
+      right 0
+      z-index 5

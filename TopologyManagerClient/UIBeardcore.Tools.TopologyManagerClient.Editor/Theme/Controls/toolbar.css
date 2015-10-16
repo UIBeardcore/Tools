@@ -1,0 +1,10 @@
+﻿
+.ribbontoolbar #BeardcoreTopologyManagerClient.button .image
+{
+	background-image: url({ThemePath}Icons/ui.beardcore.ttm-client.32x32.png);
+}
+
+.ribbontoolbar.minimized #BeardcoreTopologyManagerClient.button .image
+{
+	background-image: url({ThemePath}Icons/ui.beardcore.ttm-client.16x16.png);
+}

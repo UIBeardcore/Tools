@@ -1,0 +1,230 @@
+#TopologyManagerClientDialog body {
+  height: 100%;
+  padding: 0;
+}
+#TopologyManagerClientDialog .dialogtitle,
+#TopologyManagerClientDialog .BtnWrapper {
+  color: #ff4300;
+  text-align: center;
+  height: 20px;
+  margin: 10px auto;
+}
+#TopologyManagerClientDialog .dialogtitle #Close,
+#TopologyManagerClientDialog .BtnWrapper #Close {
+  left: 50%;
+  position: relative;
+  margin-left: -50px;
+}
+#TopologyManagerClientDialog .error-message,
+#TopologyManagerClientDialog .itemdialog,
+#TopologyManagerClientDialog .listcontainer {
+  width: 560px;
+  height: 310px;
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  background: none;
+  z-index: -10;
+  visibility: hidden;
+  transition-delay: 0s;
+}
+#TopologyManagerClientDialog .error-message.active,
+#TopologyManagerClientDialog .itemdialog.active,
+#TopologyManagerClientDialog .listcontainer.active {
+  z-index: 10;
+  visibility: visible;
+  transition: visibility 0.5s ease 0.3s;
+}
+#TopologyManagerClientDialog .error-message #TtmList,
+#TopologyManagerClientDialog .itemdialog #TtmList,
+#TopologyManagerClientDialog .listcontainer #TtmList {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons {
+  position: absolute;
+  top: -46px;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons span,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons span,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons span {
+  background-color: transparent;
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons.at-right,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons.at-right,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons.at-right {
+  right: 0;
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons#AddNewItem,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons#AddNewItem,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons#AddNewItem {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNpcmNsZSBjeD0iMjk3LjYiIGN5PSI0MjAuOSIgZmlsbD0iIzRDQUY1MCIgcj0iMjI0LjQiLz48Zz48cmVjdCBmaWxsPSIjRkZGRkZGIiBoZWlnaHQ9IjIxMy43IiB3aWR0aD0iNjQuMSIgeD0iMjY1LjYiIHk9IjMxNC4xIi8+PHJlY3QgZmlsbD0iI0ZGRkZGRiIgaGVpZ2h0PSI2NC4xIiB3aWR0aD0iMjEzLjciIHg9IjE5MC44IiB5PSIzODguOSIvPjwvZz48L3N2Zz4=");
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons#ItemConfirm,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons#ItemConfirm,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons#ItemConfirm {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGNpcmNsZSBjeD0iMjk3LjYiIGN5PSI0MjAuOSIgZmlsbD0iIzRDQUY1MCIgcj0iMjM0LjQiLz48cG9seWdvbiBmaWxsPSIjQ0NGRjkwIiBwb2ludHM9IjQxNiwzMTYgMjY0LjEsNDY3LjggMjAxLjYsNDA1LjMgMTcwLjQsNDM2LjYgMjY0LjEsNTMwLjMgNDQ3LjIsMzQ3LjMgIi8+PC9zdmc+");
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons#CloseError,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons#CloseError,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons#CloseError,
+#TopologyManagerClientDialog .error-message .uibc-list-buttons#BackToSection,
+#TopologyManagerClientDialog .itemdialog .uibc-list-buttons#BackToSection,
+#TopologyManagerClientDialog .listcontainer .uibc-list-buttons#BackToSection {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGc+PHBvbHlnb24gZmlsbD0iIzAwQkNENCIgcG9pbnRzPSI2MiwzNDYuNSAyMzUuNiwyMDEuNCAyMzUuNiw0OTEuNiAgIi8+PHBhdGggZD0iTTM0Ny4yLDI5Ni45SDE5OC40djk5LjJoMTQ4LjhjMzQuNywwLDYyLDI3LjMsNjIsNjJzLTI3LjMsNjItNjIsNjJIMzEwdjk5LjJoMzcuMiAgIGM4OS4zLDAsMTYxLjItNzEuOSwxNjEuMi0xNjEuMlM0MzYuNSwyOTYuOSwzNDcuMiwyOTYuOXoiIGZpbGw9IiMwMEJDRDQiLz48L2c+PC9zdmc+");
+}
+#TopologyManagerClientDialog .error-message {
+  width: 580px;
+  height: 370px;
+  top: 40px;
+  left: 10px;
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyA0NS42IDE2OC45IDUwNCA1MDQiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjQ1LjYgMTY4LjkgNTA0IDUwNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTI3MC40LDYyNC4xTDk0LjUsNDQ4LjJjLTE1LjYtMTUuNi0xNS42LTQwLjEsMC01NS43bDE3NS45LTE3NS45YzE1LjYtMTUuNiw0MC4xLTE1LjYsNTUuNywwTDUwMiwzOTIuNSAgYzE1LjYsMTUuNiwxNS42LDQwLjEsMCw1NS43TDMyNi4xLDYyNC4xQzMxMC41LDYzOS43LDI4NS4xLDYzOS43LDI3MC40LDYyNC4xeiIgZmlsbD0iI0Y0NDMzNiIvPjxwYXRoIGQ9Ik0yNzQuMyw1MDUuOGMwLTIuOSwxLTUuOSwyLTguOGMxLTIuOSwyLjktNC45LDQuOS02LjhjMi0yLDQuOS0zLjksNy44LTQuOWMyLjktMSw1LjktMiw5LjgtMnM2LjgsMSw5LjgsMiAgYzIuOSwxLDUuOSwyLjksNy44LDQuOWMyLDIsMy45LDMuOSw0LjksNi44YzEsMi45LDIsNS45LDIsOC44YzAsMi45LTEsNS45LTIsOC44Yy0xLDIuOS0yLjksNC45LTQuOSw2LjhjLTIsMi00LjksMy45LTcuOCw0LjkgIHMtNS45LDItOS44LDJzLTYuOC0xLTkuOC0yYy0yLjktMS00LjktMi45LTcuOC00LjljLTItMi0zLjktMy45LTQuOS02LjhDMjc1LjMsNTExLjcsMjc0LjMsNTA5LjcsMjc0LjMsNTA1Ljh6IE0zMTUuNCw0NjAuOWgtMzUuMiAgbC00LjktMTQ3LjVoNDQuOUwzMTUuNCw0NjAuOXoiIGZpbGw9IiNGRkZGRkYiLz48L3N2Zz4=");
+  background-size: 185px;
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  background-color: rgba(239,210,208,0.85);
+  transition-delay: 0s;
+}
+#TopologyManagerClientDialog .error-message.active {
+  z-index: 100;
+}
+#TopologyManagerClientDialog .error-message .uibc-list-buttons {
+  left: 10px;
+  top: 10px;
+}
+#TopologyManagerClientDialog .error-message .error-message-text {
+  position: relative;
+  top: 92.5px;
+  height: 185px;
+  left: 205px;
+  width: 355px;
+  overflow: auto;
+}
+#TopologyManagerClientDialog .itemdialog {
+  background-color: #ededed;
+  z-index: -20;
+  outline: 1px solid #aaa;
+  transition-delay: 0s;
+}
+#TopologyManagerClientDialog .itemdialog.active {
+  z-index: 20;
+  transition-delay: 0s;
+}
+#TopologyManagerClientDialog .itemdialog.active .field {
+  margin: 10px;
+}
+#TopologyManagerClientDialog .container {
+  position: relative;
+  margin: 0 10px;
+  width: 580px;
+  height: 370px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#TopologyManagerClientDialog .container > div {
+  position: absolute;
+  border: 1px solid #a1a9b2;
+  text-align: left;
+  transition: 0.3s ease-in-out;
+  width: 288px;
+  height: 121.33333333333333px;
+  background-color: #8ecef5;
+  color: #47677a;
+}
+#TopologyManagerClientDialog .container > div.full {
+  background-color: #ddf0fc;
+}
+#TopologyManagerClientDialog .container > div:before,
+#TopologyManagerClientDialog .container > div:after {
+  content: "\00a0\00a0";
+}
+#TopologyManagerClientDialog .container > div:nth-child(even) {
+  left: 290px;
+  text-align: right;
+}
+#TopologyManagerClientDialog .container > div:nth-child(1) {
+  top: 0px;
+  line-height: 123.33333333333333px;
+  background-color: #8ea3f5;
+  color: #47517a;
+}
+#TopologyManagerClientDialog .container > div:nth-child(1).full {
+  background-color: #dde3fc;
+}
+#TopologyManagerClientDialog .container > div:nth-child(2) {
+  top: 0px;
+  line-height: 123.33333333333333px;
+  background-color: #a48ef5;
+  color: #52477a;
+}
+#TopologyManagerClientDialog .container > div:nth-child(2).full {
+  background-color: #e4ddfc;
+}
+#TopologyManagerClientDialog .container > div:nth-child(3) {
+  top: 123.33333333333333px;
+  line-height: 123.33333333333333px;
+  background-color: #cf8ef5;
+  color: #67477a;
+}
+#TopologyManagerClientDialog .container > div:nth-child(3).full {
+  background-color: #f1ddfc;
+}
+#TopologyManagerClientDialog .container > div:nth-child(4) {
+  top: 123.33333333333333px;
+  line-height: 123.33333333333333px;
+  background-color: #f58ef0;
+  color: #7a4778;
+}
+#TopologyManagerClientDialog .container > div:nth-child(4).full {
+  background-color: #fcddfb;
+}
+#TopologyManagerClientDialog .container > div:nth-child(5) {
+  top: 246.66666666666669px;
+  line-height: 123.33333333333333px;
+  background-color: #f58ec5;
+  color: #7a4762;
+}
+#TopologyManagerClientDialog .container > div:nth-child(5).full {
+  background-color: #fcddee;
+}
+#TopologyManagerClientDialog .container > div:nth-child(6) {
+  top: 246.66666666666669px;
+  line-height: 123.33333333333333px;
+  background-color: #f58e9a;
+  color: #7a474d;
+}
+#TopologyManagerClientDialog .container > div:nth-child(6).full {
+  background-color: #fcdde1;
+}
+#TopologyManagerClientDialog .container > div.cicrle {
+  text-align: center;
+  border-radius: 50%;
+  width: 213.4540528928665px;
+  height: 213.4540528928665px;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  line-height: 213.4540528928665px;
+  margin-left: -106.72702644643326px;
+  margin-top: -106.72702644643326px;
+}
+#TopologyManagerClientDialog .container > div.full {
+  border-radius: 0;
+  text-align: center;
+  line-height: 40px;
+  width: 580px;
+  height: 370px;
+  margin: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+}

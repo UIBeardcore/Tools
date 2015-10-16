@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<list:listDefinition xmlns:list="http://www.sdltridion.com/2009/GUI/extensions/List">
+	<list:selectornamespaces/>
+	<list:rows>
+		<list:itemSelector>/ListItems/*</list:itemSelector>
+		<list:titleSelector>Id</list:titleSelector>
+		<list:idSelector>Id</list:idSelector>
+		<list:emptyListMessage>{Resources: Tridion.Web.UI.Editors.CME.Strings, ThereAreNoItemsInThisView}</list:emptyListMessage>
+	</list:rows>
+	<list:columns>
+
+		<!-- Used for padding purpose, however, feel free to add some fancy icons here -->
+		<list:column id="IconColumn" width="20" enableresizing="false" enablesorting="false" enablefiltering="false"/>
+		
+		<list:column id="IdColumn" type="data" class="bigger" width="150" enableresizing="false" enablesorting="false" enablefiltering="false" selector="Id" />
+
+		<list:column id="DataColumn" type="multidata" width="120" class="multidata"
+					 enableresizing="false" enablesorting="false" enablefiltering="false">
+			<list:selector class="smaller bold" translate="UIBeardcore.Tools.TopologyManagerClient.ListTranslators.DeserializeConcat">concat(local-name(./*[1]), '|', local-name(./*[2]), '|', local-name(./*[3]), '|', local-name(./*[4]), '|', local-name(./*[5]), '|', local-name(./*[6]), '|', local-name(./*[7]), '|', local-name(./*[8]), '|', local-name(./*[9]), '|', local-name(./*[10]))</list:selector>
+		</list:column>
+
+		<list:column id="DataColumn" type="multidata" class="multidata"
+					 enableresizing="false" enablesorting="false" enablefiltering="false">
+			<list:selector class="smaller" translate="UIBeardcore.Tools.TopologyManagerClient.ListTranslators.DeserializeConcat">concat(./*[1], '|', ./*[2], '|', ./*[3], '|', ./*[4], '|', ./*[5], '|', ./*[6], '|', ./*[7], '|', ./*[8], '|', ./*[9], '|', ./*[10])</list:selector>
+		</list:column>
+
+		<list:column id="DeleteColum" type="data" title="Delete" width="40" enableresizing="false" enablesorting="false" enablefiltering="false" selector="Id"
+					 translate="UIBeardcore.Tools.TopologyManagerClient.ListTranslators.TranslateDelete" />
+
+	</list:columns>
+
+</list:listDefinition>
+
