@@ -88,7 +88,7 @@
 		<div class="BtnWrapper touchButtonWrapper stack-elem">
 			<div class="rightbuttons">
 				<c:Button ID="Rename" class="button2013 touchButton green" runat="server" Label="Rename" />
-				<c:Button ID="Cancel" class="button2013 touchButton gray" runat="server" Label="<%$ Resources: Tridion.Web.UI.Strings, Cancel %>" />
+				<c:Button ID="Cancel" class="button2013 touchButton gray" runat="server" Label="<%$ Resources: Tridion.Web.UI.Editors.Base.Strings, Cancel %>" />
 			</div>
 		</div>
 	</body>
