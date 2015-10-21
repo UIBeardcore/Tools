@@ -9,16 +9,11 @@ This extension allows you to do multiple items rename in CME
 
 ## Installation
 
-1. Take a look at `$/TopologyManagerClient/UIBeardcore.Tools.TopologyManagerClient.Editor/Configuration/System.config.sample.xml` and [configure editor extension](http://tridion.uibeardcore.com/2013/04/editor-extension/ "Extensibility | Creating Editor Extension")
+1. Do build solutions (Editor and Model)
 
-2. Take a look at `$/TopologyManagerClient/UIBeardcore.Tools.TopologyManagerClient.Model/Configuration/System.config.sample.xml` and configure model extension (similar to Editor, but `Model` folder in IIS, and `models` section in System.config)
+2.Look at `\UIBeardcore.Tools.TopologyManagerClient.Editor\Configuration\add_to_cme.ps1` and run it 
 
-3. Configure `UIBeardcore.Tools.TopologyManagerClient.Batching`:
-
-    * Download project;
-    * Build it;
-    * Register batchInvoker in `%TRIDION_HOME%\config\Tridion.ContentManager.config` adding following section in configuration/batching/batchInvokers
-	<add type="UIBeardcore.Tools.TopologyManagerClient.Batching.BatchInvoker" assemblyFileName="D:\von Eagle - Private\Projects\InternalProjects\UIBeardcore.Extensibility\Tools\TopologyManagerClient\UIBeardcore.Tools.TopologyManagerClient.Batching\bin\Debug\UIBeardcore.Tools.TopologyManagerClient.Batching.dll" />
+3.Look at `\UIBeardcore.Tools.TopologyManagerClient.Models\Configuration\add_to_cme.ps1` and run it 
 
 4. Open `%TRIDION_HOME%\web\WebUI\WebRoot\Configuration\System.config` file
 
