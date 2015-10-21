@@ -2,10 +2,12 @@
 ================================================
 	
 ## Version
-This extension is intended for SDL Tridion 2013 SP1. It was not tested in previous versions
+This extension is intended for SDL Web 8. It was not tested in previous versions
+
+This extension is **not yet finished** and was not tested in any browsers except Chrome and a bit of FF.
 
 ## Description
-This extension allows you to do multiple items rename in CME
+This extension allows you to see how css transitions works, and all the other funny stuff (in fact it is a topology manager client for those UI monkeys who does not want to deal with powershell console)
 
 ## Installation
 
