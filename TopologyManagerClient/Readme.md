@@ -11,9 +11,9 @@ This extension allows you to do multiple items rename in CME
 
 1. Do build solutions (Editor and Model)
 
-2.Look at `\UIBeardcore.Tools.TopologyManagerClient.Editor\Configuration\add_to_cme.ps1` and run it 
+2. Look at `\UIBeardcore.Tools.TopologyManagerClient.Editor\Configuration\add_to_cme.ps1` and run it 
 
-3.Look at `\UIBeardcore.Tools.TopologyManagerClient.Models\Configuration\add_to_cme.ps1` and run it 
+3. Look at `\UIBeardcore.Tools.TopologyManagerClient.Models\Configuration\add_to_cme.ps1` and run it 
 
 4. Open `%TRIDION_HOME%\web\WebUI\WebRoot\Configuration\System.config` file
 
