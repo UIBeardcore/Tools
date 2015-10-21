@@ -2,7 +2,6 @@
 ================================================
 
 ## Version
-
 This extension is intended for SDL Tridion 2013 SP1. It was not tested in previous versions
 
 ## Description
